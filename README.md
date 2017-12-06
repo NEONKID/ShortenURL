@@ -1,4 +1,6 @@
 # Shorten URL
+[![Build status](https://ci.appveyor.com/api/projects/status/sf1dac2la8nxsdf9?svg=true)](https://ci.appveyor.com/project/NEONKID/shortenurl)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Shorten URL server for Windows
 

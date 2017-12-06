@@ -148,7 +148,16 @@ namespace ShortenURL
             string rtnURL = null;
             try
             {
+                using (MySqlConnection connection = new MySqlConnection(strConn))
+                {
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand("SELECT URL from " + table_Name + " where URL = \"" + value + "\"", connection);
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
+                    while (reader.Read())
+                        rtnURL = reader["URL"].ToString();
+                    reader.Close();
+                }
             }
             catch(MySqlException)
             {
